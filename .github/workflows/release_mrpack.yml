@@ -1,0 +1,53 @@
+name: Build Modrinth Pack
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: "1.24.x"
+          cache: false
+
+      - name: Install packwiz
+        run: |
+          go install github.com/packwiz/packwiz@latest
+          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+
+      - name: Refresh packwiz index
+        run: packwiz refresh
+
+      - name: Build mrpack
+        run: |
+          packwiz modrinth export \
+            --output "${{ github.event.repository.name }}-${{ github.ref_name }}.mrpack"
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: modpack-${{ github.ref_name }}
+          path: "*.mrpack"
+          retention-days: 30
+
+      - name: Create GitHub release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v3
+        with:
+          files: "*.mrpack"
+          generate_release_notes: true
