@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: modpack-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -34,20 +38,39 @@ jobs:
         run: packwiz refresh
 
       - name: Build mrpack
-        run: |
-          packwiz modrinth export \
-            --output "${{ github.event.repository.name }}-${{ github.ref_name }}.mrpack"
+        run: packwiz modrinth export --output Minecraft.mrpack
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: modpack-${{ github.ref_name }}
-          path: "*.mrpack"
+          name: Minecraft-${{ github.sha }}
+          path: Minecraft.mrpack
           retention-days: 30
 
-      - name: Create GitHub release
+      - name: Move snapshot tag
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git tag --force snapshot "$GITHUB_SHA"
+          git push --force origin snapshot
+
+      - name: Update snapshot release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: snapshot
+          name: Latest main build
+          prerelease: true
+          make_latest: "false"
+          overwrite_files: true
+          files: Minecraft.mrpack
+          body: |
+            Automatically built from commit `${{ github.sha }}`.
+
+      - name: Create version release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v3
         with:
-          files: "*.mrpack"
+          files: Minecraft.mrpack
+          overwrite_files: true
           generate_release_notes: true
+          make_latest: "true"
