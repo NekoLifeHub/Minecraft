@@ -1,12 +1,12 @@
 name = "NekosLife"
 author = "Nekos"
-version = "1.0.0"
+version = "1.5"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "4e8b25a7a81d9a677a8d927ba1c1b560724f6c24c68a6928b42234c0cb9cacf6"
+hash = "d5e9bba2f63307628da29aeea107b4d2f913abc24e433c00d5af1cd87b346e50"
 
 [versions]
 minecraft = "1.21.1"
