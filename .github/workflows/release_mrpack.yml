@@ -38,13 +38,13 @@ jobs:
         run: packwiz refresh
 
       - name: Build mrpack
-        run: packwiz modrinth export --output Minecraft.mrpack
+        run: packwiz modrinth export --output NekosLife.mrpack
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Minecraft-${{ github.sha }}
-          path: Minecraft.mrpack
+          name: NekosLife-${{ github.sha }}
+          path: NekosLife.mrpack
           retention-days: 30
 
       - name: Move snapshot tag
@@ -62,7 +62,7 @@ jobs:
           prerelease: true
           make_latest: "false"
           overwrite_files: true
-          files: Minecraft.mrpack
+          files: NekosLife.mrpack
           body: |
             Automatically built from commit `${{ github.sha }}`.
 
