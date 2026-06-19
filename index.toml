@@ -31,7 +31,7 @@ metafile = true
 
 [[files]]
 file = "mods/jei.pw.toml"
-hash = "8da46348495ee032dbac80374ff4691351e41dfee9957dc27811e0957fe13e4e"
+hash = "5367193d3f87b7bc5a81bcd64a5b96a843e76d4df7a83c8bb7e1911aa82dd52e"
 metafile = true
 
 [[files]]
@@ -55,11 +55,16 @@ hash = "674aaf0dc67f808f0054cfc7bbe041d6725fcbbe97644a85ffbd946a22d35666"
 metafile = true
 
 [[files]]
+file = "mods/set-home-anywhere.pw.toml"
+hash = "65014e6e19299d7fa6cdcb4328c38018fef8786878784d7a17e03d3a2d27087b"
+metafile = true
+
+[[files]]
 file = "mods/xaeros-minimap.pw.toml"
-hash = "141fbb4e134c0e2c08f45e4e1dda3a5d6c4fdd444f6e3e854c0ec7b0b431c741"
+hash = "3f9e51bfceabca41c537e58b8767bdb4273fdafe9f08bc472ebc255554617ad2"
 metafile = true
 
 [[files]]
 file = "mods/xaeros-world-map.pw.toml"
-hash = "096fec83cd62f4c7ad91a8dea66ec9cdce214f8edf136006828e4106d9b59f24"
+hash = "66f85f7c21c70440f919d91a96190854c9af6b50f2214153ea0ab0a5c949ccdc"
 metafile = true

@@ -1,0 +1,13 @@
+name = "Set Home Anywhere"
+filename = "sethome-1.0.1.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/TvVDvfA5/versions/ZMQSO5sB/sethome-1.0.1.jar"
+hash-format = "sha512"
+hash = "411b7d482068f43628f41477f2f1552b808669dd54e0a0e51a86c5f69bb672f5cd38663243a31cc9a07a9dfca358a59989e9420a4f6b4e74fc81a5486eff872d"
+
+[update]
+[update.modrinth]
+mod-id = "TvVDvfA5"
+version = "ZMQSO5sB"
