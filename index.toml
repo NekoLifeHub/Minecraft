@@ -5,6 +5,11 @@ file = ".github/workflows/release_mrpack.yml"
 hash = "32bd758ecae997d96a57362c40bce32ab77336bce56024ae3b30185227e5c53a"
 
 [[files]]
+file = "mods/balm.pw.toml"
+hash = "76122ac2bb341daceebb19cd69e1f3bf19efea88fa59010865c1b8f02ea1d759"
+metafile = true
+
+[[files]]
 file = "mods/create-aeronautics.pw.toml"
 hash = "5fab8d2e412683dfd72f08cf6750e51b03cb43192e8eb783e962ba28d20978bc"
 metafile = true
@@ -35,6 +40,11 @@ hash = "5367193d3f87b7bc5a81bcd64a5b96a843e76d4df7a83c8bb7e1911aa82dd52e"
 metafile = true
 
 [[files]]
+file = "mods/justenoughcharacters.pw.toml"
+hash = "72b3206ba8e650db2089634763e7b742a828ee8f8f8a4766348c3a99411d16c4"
+metafile = true
+
+[[files]]
 file = "mods/kotlin-for-forge.pw.toml"
 hash = "27302b0087cf53570cd7a3b4eb550a208cbb6f6ba07210c604176155f39e0078"
 metafile = true
@@ -57,6 +67,11 @@ metafile = true
 [[files]]
 file = "mods/set-home-anywhere.pw.toml"
 hash = "65014e6e19299d7fa6cdcb4328c38018fef8786878784d7a17e03d3a2d27087b"
+metafile = true
+
+[[files]]
+file = "mods/trashslot.pw.toml"
+hash = "c1e0c805d5ccd49535a6820aa8a2461a516437f90312fcadd393f928e3ce7bf2"
 metafile = true
 
 [[files]]
