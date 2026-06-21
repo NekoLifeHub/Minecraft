@@ -65,13 +65,13 @@ hash = "674aaf0dc67f808f0054cfc7bbe041d6725fcbbe97644a85ffbd946a22d35666"
 metafile = true
 
 [[files]]
-file = "mods/set-home-anywhere.pw.toml"
-hash = "65014e6e19299d7fa6cdcb4328c38018fef8786878784d7a17e03d3a2d27087b"
+file = "mods/tpa-utilities-neo.pw.toml"
+hash = "8dc8463bb0f5ad05298096eb0b9cfb577ce68924490bf081e6ead7376d6e9f62"
 metafile = true
 
 [[files]]
 file = "mods/trashslot.pw.toml"
-hash = "c1e0c805d5ccd49535a6820aa8a2461a516437f90312fcadd393f928e3ce7bf2"
+hash = "2a24f88b147b255b8cd27d6be0dd8987b9ac4204f1ae64c540566e775f0fae54"
 metafile = true
 
 [[files]]

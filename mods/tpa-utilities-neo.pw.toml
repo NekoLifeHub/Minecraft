@@ -1,0 +1,13 @@
+name = "TPA Utilities Neo"
+filename = "tpautilities-1.0.2.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/KaYX2AdN/versions/6q9v2rIB/tpautilities-1.0.2.jar"
+hash-format = "sha512"
+hash = "d29304bea8519194b0d713814e4bb316d6327ab16bbd20e592c73ffe15e3f39daf690cce06c1fb95a0ddf222999e5276e6f0a450dfce0b8082f7ecc9f35efe5a"
+
+[update]
+[update.modrinth]
+mod-id = "KaYX2AdN"
+version = "6q9v2rIB"
