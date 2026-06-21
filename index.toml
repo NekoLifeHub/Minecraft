@@ -65,8 +65,8 @@ hash = "674aaf0dc67f808f0054cfc7bbe041d6725fcbbe97644a85ffbd946a22d35666"
 metafile = true
 
 [[files]]
-file = "mods/tpa-utilities-neo.pw.toml"
-hash = "8dc8463bb0f5ad05298096eb0b9cfb577ce68924490bf081e6ead7376d6e9f62"
+file = "mods/teleport-commands.pw.toml"
+hash = "4069c2ead5632415da835ba6043097ddf0f0c3ca8a52caad76a20b116217ab4f"
 metafile = true
 
 [[files]]
